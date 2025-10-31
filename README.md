@@ -1,4 +1,5 @@
 # 筱可AI工程实验仓库
+
 ✨【你好，我是筱可，欢迎来到"筱可AI的工程实验仓库"】✨
 
 🌈 期待与你成为"AI+成长"的双向奔赴伙伴！
@@ -15,7 +16,6 @@
 - 在生产环境中使用前，请进行充分的测试和验证
 
 ## 📚 技术学习与实验代码
-
 
 ### 🔍 向量检索与相似度计算
 
@@ -61,7 +61,7 @@
 
 ### 🧮 算法基础与数学原理
 
-1. **KV缓存优化**：大模型推理中的KV缓存机制优化，地址： [datas/test_kv_cache](datas/test_kv_cache)
+1. **KV缓存实现**：大模型推理中的KV缓机制实现[datas/test_kv_cache](datas/test_kv_cache)
 2. **大模型Logit分析**：解析大模型输出概率分布，地址： [datas/test_llm_logit](datas/test_llm_logit)
 3. **知识图谱构建**：知识图谱的构建与查询技术，地址： [datas/test_kg](datas/test_kg)
 4. **红楼梦知识图谱**：基于红楼梦的知识图谱构建案例，地址： [datas/test_hong_lou_meng_kg](datas/test_hong_lou_meng_kg)
@@ -74,7 +74,7 @@
 2. **训练：Embedding 模型**：示例脚本与数据，用于对嵌入模型进行微调（train_embedding.py），地址： [datas/test_train_embedding](datas/test_train_embedding)
 3. **训练：Reranker（BERT）**：基于 BERT 的重排序模型训练示例（train_bert_rerank.py），含默认训练数据与损失曲线，地址： [datas/test_train_reranker](datas/test_train_reranker)
 4. **模型下载管理**：ModelScope模型下载与管理工具，地址： [datas/test_download_modelscope_model](datas/test_download_modelscope_model)
-5. **DPO 训练脚本**： DPO（Differential Preference Optimization）训练脚本，支持按样本量与 epoch 控制，地址： [datas/test_dpo/dpo.py](datas/test_dpo/dpo.py)
+5. **DPO 训练脚本**： DPO（Direct Preference Optimization）训练脚本，支持按样本量与 epoch 控制，地址： [datas/test_dpo/dpo.py](datas/test_dpo/dpo.py)
 
 ### 🔧 系统集成与工程化
 
@@ -109,7 +109,7 @@
 ---
 
 公众号：
-![公众号](images/筱可AI_860.jpg)
+![公众号](https://oss-liuchengtu.hudunsoft.com/userimg/cd/cd7e1ea8a192f17bbdf8efe8418449e8.jpg)
 
 ---
 
