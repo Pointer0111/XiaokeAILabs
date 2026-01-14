@@ -56,25 +56,20 @@
 
 1. **OpenVINO加速**：Intel OpenVINO模型优化与推理加速，地址： [datas/test_openvino](datas/test_openvino)
 2. **ONNX模型转换**：模型格式转换与优化部署，地址： [datas/test_onnx](datas/test_onnx)
-3. **Jina OpenVINO**：Jina模型的OpenVINO优化方案，地址： [datas/test_jina_openvino](datas/test_jina_openvino)
-4. **openvino_sentence_transformer**：openvino_sentence_transformer intel NPU部署，地址： [datas/test_openvino_sentence_transformer](datas/test_openvino_sentence_transformer)
 
 ### 🧮 算法基础与数学原理
 
-1. **KV缓存实现**：大模型推理中的KV缓机制实现[datas/test_kv_cache](datas/test_kv_cache)
-2. **大模型Logit分析**：解析大模型输出概率分布，地址： [datas/test_llm_logit](datas/test_llm_logit)
-3. **知识图谱构建**：知识图谱的构建与查询技术，地址： [datas/test_kg](datas/test_kg)
-4. **红楼梦知识图谱**：基于红楼梦的知识图谱构建案例，地址： [datas/test_hong_lou_meng_kg](datas/test_hong_lou_meng_kg)
-5. **function call**：Agent函数调用，地址： [datas/test_fc](datas/test_fc)
-6. **UMAP降维**：使用UMAP进行高维数据降维与可视化，包含PCA对比和相似度分析，地址： [datas/test_umap](datas/test_umap)
+1. **知识图谱构建**：知识图谱的构建与查询技术，地址： [datas/test_kg](datas/test_kg)
+2. **红楼梦知识图谱**：基于红楼梦的知识图谱构建案例，地址： [datas/test_hong_lou_meng_kg](datas/test_hong_lou_meng_kg)
+3. **function call**：Agent函数调用，地址： [datas/test_fc](datas/test_fc)
+4. **UMAP降维**：使用UMAP进行高维数据降维与可视化，包含PCA对比和相似度分析，地址： [datas/test_umap](datas/test_umap)
 
 ### 📊 模型微调训练与评估
 
 1. **Embedding微调**：向量模型的数据准备与微调训练，地址： [datas/test_embedding](datas/test_embedding)
 2. **训练：Embedding 模型**：示例脚本与数据，用于对嵌入模型进行微调（train_embedding.py），地址： [datas/test_train_embedding](datas/test_train_embedding)
 3. **训练：Reranker（BERT）**：基于 BERT 的重排序模型训练示例（train_bert_rerank.py），含默认训练数据与损失曲线，地址： [datas/test_train_reranker](datas/test_train_reranker)
-4. **模型下载管理**：ModelScope模型下载与管理工具，地址： [datas/test_download_modelscope_model](datas/test_download_modelscope_model)
-5. **DPO 训练脚本**： DPO（Direct Preference Optimization）训练脚本，支持按样本量与 epoch 控制，地址： [datas/test_dpo/dpo.py](datas/test_dpo/dpo.py)
+4. **DPO 训练脚本**： DPO（Direct Preference Optimization）训练脚本，支持按样本量与 epoch 控制，地址： [datas/test_dpo/dpo.py](datas/test_dpo/dpo.py)
 
 
 ## 🤝 贡献指南
