@@ -17,7 +17,7 @@
 from FlagEmbedding import BGEM3FlagModel
 import numpy as np
 
-model_path = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3"
+model_path = "/root/XiaokeAILabs/bge-m3"
 
 # 初始化模型
 model = BGEM3FlagModel(model_path, use_fp16=True)

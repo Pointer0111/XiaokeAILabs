@@ -6,6 +6,9 @@ __pycache__/
 build/
 dist/
 
+bge-m3/
+bge-large-zh-v1.5/
+
 # Jupyter Notebook忽略规则
 .ipynb_checkpoints/
 

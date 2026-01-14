@@ -21,7 +21,7 @@ from sklearn.metrics import silhouette_score
 import pandas as pd
 
 # 加载模型
-model_path = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3"
+model_path = "/root/XiaokeAILabs/bge-m3"
 model = BGEM3FlagModel(model_path, use_fp16=True)
 
 # 样本新闻标题集合（涵盖科技、体育、政治、娱乐和健康五个主题）

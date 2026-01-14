@@ -190,7 +190,7 @@ def run_hongloumeng_test():
     print(f"📝 文本预览: {test_text[:200]}...")
     
     # 初始化模型
-    model_path = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3"
+    model_path = "/root/XiaokeAILabs/bge-m3"
     if not os.path.exists(model_path):
         print(f"❌ 错误：模型路径不存在 {model_path}")
         return
@@ -272,7 +272,7 @@ def test_different_text_samples():
         {"start": 15000, "length": 2000, "name": "第二章内容"},
     ]
     
-    model_path = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3"
+    model_path = "/root/XiaokeAILabs/bge-m3"
     if not os.path.exists(model_path):
         print(f"❌ 错误：模型路径不存在 {model_path}")
         return

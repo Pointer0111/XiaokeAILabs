@@ -93,7 +93,7 @@ def mmr_selection(query_embedding, item_embeddings, item_ids, lambda_param, num_
 # --- 使用 FlagEmbedding 获取向量并运行 MMR ---
 
 # 1. 加载模型 (请确保模型路径正确)
-model_path = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-large-zh-v1.5"
+model_path = "/root/XiaokeAILabs/bge-large-zh-v1.5"
 try:
     model = FlagModel(model_path, use_fp16=True) # 尝试使用 FP16 加速
     print("模型加载成功。")

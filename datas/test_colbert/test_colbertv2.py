@@ -22,7 +22,7 @@ import os
 # 初始化BGE-M3模型
 # 请确保模型路径正确，如果模型未下载，FlagEmbedding库会自动下载
 
-model_path = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3" # 使用你的本地路径
+model_path = "/root/XiaokeAILabs/bge-m3" # 使用你的本地路径
 
 # model_path = 'BAAI/bge-m3' # 直接使用Hugging Face模型ID
 try:

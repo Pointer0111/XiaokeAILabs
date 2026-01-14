@@ -218,7 +218,7 @@ def test_late_chunking():
     """测试迟分功能"""
     
     # 模型路径
-    model_path = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3"
+    model_path = "/root/XiaokeAILabs/bge-m3"
     
     # 检查模型路径是否存在
     if not os.path.exists(model_path):
@@ -312,7 +312,7 @@ def traditional_chunking_encode(processor, chunks: List[str]) -> List[np.ndarray
 def compare_with_traditional_chunking():
     """比较迟分和传统分块的效果"""
     
-    model_path = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3"
+    model_path = "/root/XiaokeAILabs/bge-m3"
     
     if not os.path.exists(model_path):
         print(f"错误：模型路径不存在 {model_path}")

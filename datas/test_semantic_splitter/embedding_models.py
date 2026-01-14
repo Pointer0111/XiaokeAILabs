@@ -176,7 +176,7 @@ class LocalEmbeddingModel:
     本地SentenceTransformer嵌入模型封装类
     """
     
-    def __init__(self, model_name: str = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3"):
+    def __init__(self, model_name: str = "/root/XiaokeAILabs/bge-m3"):
         """
         初始化本地嵌入模型
         

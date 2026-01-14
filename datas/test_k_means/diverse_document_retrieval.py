@@ -20,7 +20,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # 加载模型
 # 使用BGE-M3模型进行文本向量化，该模型支持多语言文本编码
-model_path = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3"
+model_path = "/root/XiaokeAILabs/bge-m3"
 model = BGEM3FlagModel(model_path, use_fp16=True)  # 使用FP16加速推理
 
 def diversity_enhanced_retrieval(query, doc_vectors, doc_texts, top_k=5, diversity_clusters=3):

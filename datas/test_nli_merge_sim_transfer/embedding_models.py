@@ -176,7 +176,7 @@ class LocalEmbeddingModel:
     本地SentenceTransformer嵌入模型封装类
     """
     
-    def __init__(self, model_name: str = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3"):
+    def __init__(self, model_name: str = "/root/XiaokeAILabs/bge-m3"):
         """
         初始化本地嵌入模型
         
@@ -231,7 +231,7 @@ class EmbeddingModelFactory:
                 return LocalEmbeddingModel()
         
         elif model_type == "local":
-            model_name = kwargs.get("model_name", r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3")
+            model_name = kwargs.get("model_name", "/root/XiaokeAILabs/bge-m3")
             return LocalEmbeddingModel(model_name)
         
         else:
@@ -258,7 +258,7 @@ def get_default_embedding_model(api_key: str = None, base_url: str = None):
     except Exception as e:
         print(f"无法初始化API模型，回退到本地模型: {e}")
         # 回退到本地模型
-        model_path = os.environ.get("EMBEDDING_MODEL_PATH",  r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3")
+        model_path = os.environ.get("EMBEDDING_MODEL_PATH",  "/root/XiaokeAILabs/bge-m3")
         return EmbeddingModelFactory.create_model("local", model_name=model_path)
 
 

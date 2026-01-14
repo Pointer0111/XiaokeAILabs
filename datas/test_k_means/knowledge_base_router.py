@@ -19,7 +19,7 @@ from sklearn.cluster import KMeans
 from sklearn.metrics.pairwise import cosine_similarity
 
 # 初始化 BGE-M3 模型
-model_path = r"C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3"
+model_path = "/root/XiaokeAILabs/bge-m3"
 model = BGEM3FlagModel(model_path, use_fp16=True)
 
 class ClusterAwareRouter:
