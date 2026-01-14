@@ -13,6 +13,8 @@ jina-colbert-v2/
 # Jupyter Notebook忽略规则
 .ipynb_checkpoints/
 
+
+
 # VS Code忽略规则
 .vscode/
 *.code-workspace

@@ -34,18 +34,18 @@
 
 1. **~~分词算法~~**：BPE、WordPiece、SentencePiece等分词算法原理与实现，地址： [datas/test_tokenizer](datas/test_tokenizer)
 2. **~~文档分块~~**：结合语义和结构的混合分块策略，地址： [datas/test_hybrid_chunking](datas/test_hybrid_chunking)
-3. **延迟分块**：先编码后分块的策略，保持上下文连贯性，地址： [datas/test_late_chunking](datas/test_late_chunking)
-4. **句子长度影响分析**：句子长度对相似度计算的影响研究，地址： [datas/test_sentence_length](datas/test_sentence_length)
+3. **~~延迟分块~~**：先编码后分块的策略，保持上下文连贯性，地址： [datas/test_late_chunking](datas/test_late_chunking)
+4. **~~句子长度影响分析~~**：句子长度对相似度计算的影响研究，地址： [datas/test_sentence_length](datas/test_sentence_length)
 5. **代码表格相似度**：特殊格式文本的相似度计算方法，地址： [datas/test_sentence_similarity_with_code_or_table](datas/test_sentence_similarity_with_code_or_table)
 
 ### 🎯 检索增强与重排序
 
-1. **BGE重排序模型**：使用BGE Reranker提升检索精度，地址： [datas/test_rerank](datas/test_rerank)
+1. **~~BGE重排序模型~~**：使用BGE Reranker提升检索精度，地址： [datas/test_rerank](datas/test_rerank)
 2. **~~BM25增强检索~~**：传统BM25与现代向量检索的结合，地址： [datas/test_bm25_augmentation](datas/test_bm25_augmentation)
 
 ### 🎨 多模态AI技术
 
-1. **BGE-VL多模态**：视觉-语言多模态模型的实战应用，地址： [datas/test_bge_vl](datas/test_bge_vl)
+1. **~~BGE-VL多模态~~**：视觉-语言多模态模型的实战应用，地址： [datas/test_bge_vl](datas/test_bge_vl)
 2. **~~Jina CLIP~~**：图文匹配与多模态检索实现，地址： [datas/test_jina_clip_v2](datas/test_jina_clip_v2)
 3. **~~CLIP模型微调~~**：CLIP模型的轻量级微调实现，支持冻结部分层以提高训练效率，地址： [datas/test_finetune_clip](datas/test_finetune_clip)
 

@@ -14,7 +14,7 @@ from dataclasses import dataclass
 import time
 
 # 添加项目根目录到路径
-project_root = r"C:\Users\k\Documents\project\programming_project\python_project\importance\XiaokeAILabs"
+project_root = "/root/XiaokeAILabs"
 sys.path.append(project_root)
 
 # 导入迟分处理器
