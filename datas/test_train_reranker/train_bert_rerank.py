@@ -178,7 +178,7 @@ def main():
     # 为了简化，所有参数直接在这里设置
     args = {
         "model_name_or_path": "BAAI/bge-reranker-large",
-        "train_dataset": "default_train_data.jsonl",
+        "train_dataset": "/root/XiaokeAILabs/datas/test_train_reranker/default_train_data.jsonl",
         "output_dir": "./output_bge_reranker_large_finetuned",
         "max_len": 512,
         "epochs": 30,

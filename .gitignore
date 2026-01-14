@@ -8,7 +8,7 @@ dist/
 
 bge-m3/
 bge-large-zh-v1.5/
-
+clip_output/
 # Jupyter Notebook忽略规则
 .ipynb_checkpoints/
 

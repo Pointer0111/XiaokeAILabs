@@ -59,8 +59,7 @@ class TrainConfig(TypedDict):
 
 
 CONFIG: TrainConfig = {
-    "model_name": "./CLIP-ViT-B-32-laion2B-s34B-b79K",
-	# "model_name": "laion/CLIP-ViT-B-32-laion2B-s34B-b79K",  # 若本地已下载可替换为本地路径
+    "model_name": "laion/CLIP-ViT-B-32-laion2B-s34B-b79K",
 	"output_dir": "./clip_output",
 	"seed": 42,
 	"train_batch_size": 300,

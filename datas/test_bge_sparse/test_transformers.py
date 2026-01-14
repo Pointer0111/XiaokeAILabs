@@ -332,7 +332,7 @@ def compare_with_flagembedding():
         
         # 测试句子
         test_sentence = "这是一个测试句子。"
-        model_path = r'C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3'
+        model_path = "/root/XiaokeAILabs/bge-m3"
         
         # 使用我们的实现
         print("使用 transformers 实现:")

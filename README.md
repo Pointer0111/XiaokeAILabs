@@ -20,9 +20,9 @@
 ### 🔍 向量检索与相似度计算
 
 1. **~~MMR多样性检索~~**：最大边际相关性搜索算法，平衡相关性与多样性，地址： [datas/test_mmr_search](datas/test_mmr_search)
-2. **K-means聚类检索**：基于聚类的文档分组与多样性检索策略，地址： [datas/test_k_means](datas/test_k_means)
+2. **~~K-means聚类检索~~**：基于聚类的文档分组与多样性检索策略，地址： [datas/test_k_means](datas/test_k_means)
 3. **~~SimHash相似度~~**：局部敏感哈希算法实现，用于近似相似度计算，地址： [datas/test_simhash](datas/test_simhash)
-4. **BGE稀疏检索**：稀疏向量检索与稠密向量检索对比分析，地址： [datas/test_bge_sparse](datas/test_bge_sparse)
+4. **~~BGE稀疏检索~~**：稀疏向量检索与稠密向量检索对比分析，地址： [datas/test_bge_sparse](datas/test_bge_sparse)
 5. **语义文档分块**：基于语义的文档分块策略，地址： [datas/test_semantic_splitter](datas/test_semantic_splitter)
 
 ### 🗃️ 向量数据库数据库
@@ -50,12 +50,7 @@
 
 1. **BGE-VL多模态**：视觉-语言多模态模型的实战应用，地址： [datas/test_bge_vl](datas/test_bge_vl)
 2. **Jina CLIP**：图文匹配与多模态检索实现，地址： [datas/test_jina_clip_v2](datas/test_jina_clip_v2)
-3. **CLIP模型微调**：CLIP模型的轻量级微调实现，支持冻结部分层以提高训练效率，地址： [datas/test_finetune_clip](datas/test_finetune_clip)
-
-### 🤖 模型优化与部署
-
-1. **OpenVINO加速**：Intel OpenVINO模型优化与推理加速，地址： [datas/test_openvino](datas/test_openvino)
-2. **ONNX模型转换**：模型格式转换与优化部署，地址： [datas/test_onnx](datas/test_onnx)
+3. **~~CLIP模型微调~~**：CLIP模型的轻量级微调实现，支持冻结部分层以提高训练效率，地址： [datas/test_finetune_clip](datas/test_finetune_clip)
 
 ### 🧮 算法基础与数学原理
 
@@ -67,8 +62,8 @@
 
 1. **Embedding微调**：向量模型的数据准备与微调训练，地址： [datas/test_embedding](datas/test_embedding)
 2. **训练：Embedding 模型**：示例脚本与数据，用于对嵌入模型进行微调（train_embedding.py），地址： [datas/test_train_embedding](datas/test_train_embedding)
-3. **训练：Reranker（BERT）**：基于 BERT 的重排序模型训练示例（train_bert_rerank.py），含默认训练数据与损失曲线，地址： [datas/test_train_reranker](datas/test_train_reranker)
-4. **DPO 训练脚本**： DPO（Direct Preference Optimization）训练脚本，支持按样本量与 epoch 控制，地址： [datas/test_dpo/dpo.py](datas/test_dpo/dpo.py)
+3. **~~训练：Reranker（BERT）~~**：基于 BERT 的重排序模型训练示例（train_bert_rerank.py），含默认训练数据与损失曲线，地址： [datas/test_train_reranker](datas/test_train_reranker)
+4. **~~DPO 训练脚本~~**： DPO（Direct Preference Optimization）训练脚本，支持按样本量与 epoch 控制，地址： [datas/test_dpo/dpo.py](datas/test_dpo/dpo.py)
 
 
 ## 🤝 贡献指南

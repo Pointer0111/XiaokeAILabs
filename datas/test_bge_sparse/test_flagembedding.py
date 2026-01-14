@@ -6,7 +6,7 @@ sentences = [
     "我们正在演示如何使用 BGE-M3 的词汇权重。"
 ]
 
-model = BGEM3FlagModel(r'C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3', use_fp16=True) # 使用本地模型路径
+model = BGEM3FlagModel("/root/XiaokeAILabs/bge-m3", use_fp16=True) # 使用本地模型路径
 output = model.encode(sentences, return_dense=False, return_sparse=True, return_colbert_vecs=False)
 sparse_lexical_weights = output["lexical_weights"]
 
