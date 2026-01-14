@@ -76,13 +76,6 @@
 4. **模型下载管理**：ModelScope模型下载与管理工具，地址： [datas/test_download_modelscope_model](datas/test_download_modelscope_model)
 5. **DPO 训练脚本**： DPO（Direct Preference Optimization）训练脚本，支持按样本量与 epoch 控制，地址： [datas/test_dpo/dpo.py](datas/test_dpo/dpo.py)
 
-### 🔧 系统集成与工程化
-
-1. **Rust Python集成**：使用Rust优化Python性能瓶颈，地址： [datas/test_rust_in_python](datas/test_rust_in_python)
-
-### 🧠 模型工程
-
-1. 模型量化：基于bitsbytes的模型量化，地址： [datas/test_quantize_model/quantize_qwen.py](datas/test_quantize_model/quantize_qwen.py)
 
 ## 🤝 贡献指南
 
