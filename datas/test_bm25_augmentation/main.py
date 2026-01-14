@@ -36,7 +36,7 @@ for idx in sorted_indices[:5]:  # 取前5名
 
 # 3. 使用Embedding模型进行重排序（稠密检索阶段）
 # 加载预训练的Embedding模型
-model = SentenceTransformer(r'C:\Users\k\Desktop\BaiduSyncdisk\baidu_sync_documents\hf_models\bge-m3',trust_remote_code=True)  # 示例模型
+model = SentenceTransformer("/root/XiaokeAILabs/bge-m3",trust_remote_code=True)  # 示例模型
 
 # 计算查询和所有文档的嵌入向量
 query_embedding = model.encode([query])[0]

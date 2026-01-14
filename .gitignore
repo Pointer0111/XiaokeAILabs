@@ -9,6 +9,7 @@ dist/
 bge-m3/
 bge-large-zh-v1.5/
 clip_output/
+jina-colbert-v2/
 # Jupyter Notebook忽略规则
 .ipynb_checkpoints/
 

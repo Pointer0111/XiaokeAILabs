@@ -28,40 +28,37 @@
 ### 🗃️ 向量数据库数据库
 
 1. **SQLite向量扩展在RAG中的应用**：sqlite-vec扩展的使用教程，实现向量存储与检索，地址： [datas/test_sqlite](datas/test_sqlite)
-2. **DuckDB数据库在RAG中的应用**：现代分析型数据库DuckDB的向量搜索与全文检索，地址： [datas/test_duckdb](datas/test_duckdb)
+2. **~~DuckDB数据库在RAG中的应用~~**：现代分析型数据库DuckDB的向量搜索与全文检索，地址： [datas/test_duckdb](datas/test_duckdb)
 
 ### 🔤 分词与文本处理
 
-1. **分词算法**：BPE、WordPiece、SentencePiece等分词算法原理与实现，地址： [datas/test_tokenizer](datas/test_tokenizer)
-2. **文档分块**：结合语义和结构的混合分块策略，地址： [datas/test_hybrid_chunking](datas/test_hybrid_chunking)
+1. **~~分词算法~~**：BPE、WordPiece、SentencePiece等分词算法原理与实现，地址： [datas/test_tokenizer](datas/test_tokenizer)
+2. **~~文档分块~~**：结合语义和结构的混合分块策略，地址： [datas/test_hybrid_chunking](datas/test_hybrid_chunking)
 3. **延迟分块**：先编码后分块的策略，保持上下文连贯性，地址： [datas/test_late_chunking](datas/test_late_chunking)
-4. **布局排序算法**：针对复杂文档布局的智能排序方法，地址： [datas/layout_sorter](datas/layout_sorter)
-5. **SpaCy模型微调**：自然语言处理模型的微调和训练，地址： [datas/spacy_finetune](datas/spacy_finetune)
-6. **句子长度影响分析**：句子长度对相似度计算的影响研究，地址： [datas/test_sentence_length](datas/test_sentence_length)
-7. **代码表格相似度**：特殊格式文本的相似度计算方法，地址： [datas/test_sentence_similarity_with_code_or_table](datas/test_sentence_similarity_with_code_or_table)
+4. **句子长度影响分析**：句子长度对相似度计算的影响研究，地址： [datas/test_sentence_length](datas/test_sentence_length)
+5. **代码表格相似度**：特殊格式文本的相似度计算方法，地址： [datas/test_sentence_similarity_with_code_or_table](datas/test_sentence_similarity_with_code_or_table)
 
 ### 🎯 检索增强与重排序
 
 1. **BGE重排序模型**：使用BGE Reranker提升检索精度，地址： [datas/test_rerank](datas/test_rerank)
-2. **BM25增强检索**：传统BM25与现代向量检索的结合，地址： [datas/test_bm25_augmentation](datas/test_bm25_augmentation)
-3. **深度搜索**：构建一个deepsearch，地址： [datas/test_deepsearch](datas/test_deepsearch)
+2. **~~BM25增强检索~~**：传统BM25与现代向量检索的结合，地址： [datas/test_bm25_augmentation](datas/test_bm25_augmentation)
 
 ### 🎨 多模态AI技术
 
 1. **BGE-VL多模态**：视觉-语言多模态模型的实战应用，地址： [datas/test_bge_vl](datas/test_bge_vl)
-2. **Jina CLIP**：图文匹配与多模态检索实现，地址： [datas/test_jina_clip_v2](datas/test_jina_clip_v2)
+2. **~~Jina CLIP~~**：图文匹配与多模态检索实现，地址： [datas/test_jina_clip_v2](datas/test_jina_clip_v2)
 3. **~~CLIP模型微调~~**：CLIP模型的轻量级微调实现，支持冻结部分层以提高训练效率，地址： [datas/test_finetune_clip](datas/test_finetune_clip)
 
 ### 🧮 算法基础与数学原理
 
-1. **知识图谱构建**：知识图谱的构建与查询技术，地址： [datas/test_kg](datas/test_kg)
+1. **~~知识图谱构建~~**：知识图谱的构建与查询技术，地址： [datas/test_kg](datas/test_kg)
 2. **红楼梦知识图谱**：基于红楼梦的知识图谱构建案例，地址： [datas/test_hong_lou_meng_kg](datas/test_hong_lou_meng_kg)
 3. **~~function call~~**：Agent函数调用，地址： [datas/test_fc](datas/test_fc)
 4. **~~UMAP降维~~**：使用UMAP进行高维数据降维与可视化，包含PCA对比和相似度分析，地址： [datas/test_umap](datas/test_umap)
 ### 📊 模型微调训练与评估
 
 1. **Embedding微调**：向量模型的数据准备与微调训练，地址： [datas/test_embedding](datas/test_embedding)
-2. **训练：Embedding 模型**：示例脚本与数据，用于对嵌入模型进行微调（train_embedding.py），地址： [datas/test_train_embedding](datas/test_train_embedding)
+2. **~~训练：Embedding 模型~~**：示例脚本与数据，用于对嵌入模型进行微调（train_embedding.py），地址： [datas/test_train_embedding](datas/test_train_embedding)
 3. **~~训练：Reranker（BERT）~~**：基于 BERT 的重排序模型训练示例（train_bert_rerank.py），含默认训练数据与损失曲线，地址： [datas/test_train_reranker](datas/test_train_reranker)
 4. **~~DPO 训练脚本~~**： DPO（Direct Preference Optimization）训练脚本，支持按样本量与 epoch 控制，地址： [datas/test_dpo/dpo.py](datas/test_dpo/dpo.py)
 
