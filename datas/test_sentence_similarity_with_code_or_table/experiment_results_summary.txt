@@ -1,0 +1,91 @@
+============================== 实验结果汇总 ==============================
+
+## 模型: Local BGE-M3
+
+### 实验: 代码与文本相似度
+- 'def add(a, b):\n    return a + b' vs '这是一个计算两个数之和的函数。': 0.6526
+- 'def add(a, b):\n    return a + b' vs '我是一个用来计算两个数之和的函数': 0.6447
+- '这是一个计算两个数之和的函数。' vs '我是一个用来计算两个数之和的函数': 0.9149
+- 'def add(a, b):\n    return a + b' vs '\n# Function to add two numbers\ndef sum_numbers(x, y):\n    # Returns the sum of x and y\n    result = x + y\n    return result\n': 0.6930
+- 'def add(a, b):\n    return a + b' vs '\ndef sum_two_values(val1, val2):\n    s = val1 + val2\n    return s\n': 0.6694
+- '\n# Function to add two numbers\ndef sum_numbers(x, y):\n    # Returns the sum of x and y\n    result = x + y\n    return result\n' vs '\ndef sum_two_values(val1, val2):\n    s = val1 + val2\n    return s\n': 0.6571
+- '\n# Function to add two numbers\ndef sum_numbers(x, y):\n    # Returns the sum of x and y\n    result = x + y\n    return result\n' vs '\n# This function takes two arguments and returns their sum.\ndef calculate_sum(num1, num2):\n    # Perform addition\n    total = num1 + num2\n    # Return the result\n    return total\n': 0.8296
+- '这是一个计算两个数之和的函数。' vs '\n# Function to add two numbers\ndef sum_numbers(x, y):\n    # Returns the sum of x and y\n    result = x + y\n    return result\n': 0.6381
+
+### 实验: 文本与表格相似度
+- '这是一个关于不同水果信息的表格。' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.6372
+- '这个表格展示了苹果、香蕉和柠檬的颜色和味道。' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.7334
+- '水果信息：苹果是红色的，味道甜；香蕉是黄色的，味道甜；柠檬是黄色的，味道酸。' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.8994
+- '这是一段关于天气的文字，与水果表格无关。' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.5431
+- '这是一个关于不同水果信息的表格。' vs '这个表格展示了苹果、香蕉和柠檬的颜色和味道。': 0.7935
+- '这是一个关于不同水果信息的表格。' vs '水果信息：苹果是红色的，味道甜；香蕉是黄色的，味道甜；柠檬是黄色的，味道酸。': 0.6693
+- '这个表格展示了苹果、香蕉和柠檬的颜色和味道。' vs '水果信息：苹果是红色的，味道甜；香蕉是黄色的，味道甜；柠檬是黄色的，味道酸。': 0.8048
+- '这是一个关于不同水果信息的表格。' vs '这是一段关于天气的文字，与水果表格无关。': 0.7620
+- '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |' vs '| Fruit  | Color  | Taste  |\n|--------|--------|--------|\n| Apple  | Red    | Sweet  |\n| Banana | Yellow | Sweet  |\n| Orange | Orange | Sweet  |': 0.8995
+- '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |' vs '| 城市   | 人口(万) | GDP(亿) |\n|------|-------|-------|\n| 北京   | 2189  | 40269 |\n| 上海   | 2487  | 43214 |\n| 广州   | 1867  | 28231 |': 0.4349
+
+### 实验: 查询(代码)与目标相似度
+- 'Python 函数：计算 a 和 b 的和' vs 'def add(a, b):\n    return a + b': 0.7064
+- '用于两数相加的函数，基于python' vs 'def add(a, b):\n    return a + b': 0.6685
+- 'python add function' vs 'def add(a, b):\n    return a + b': 0.6314
+- '计算' vs 'def add(a, b):\n    return a + b': 0.5744
+- 'Java add method' vs 'def add(a, b):\n    return a + b': 0.6106
+- '柠檬是什么味道的？' vs 'def add(a, b):\n    return a + b': 0.2822
+- '最近的电影推荐' vs 'def add(a, b):\n    return a + b': 0.3320
+- 'Python 函数：计算 a 和 b 的和' vs '用于两数相加的函数，基于python': 0.7063
+
+### 实验: 查询(表格)与目标相似度
+- '柠檬是什么味道的？' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.6150
+- '水果颜色和味道概览' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.7604
+- '表格里有哪些水果？' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.5863
+- '水果' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.6773
+- '食物营养成分' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.5043
+- 'Python 函数：计算 a 和 b 的和' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.3492
+- '最近的电影推荐' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.3120
+- '柠檬是什么味道的？' vs '水果颜色和味道概览': 0.6550
+
+## 模型: Local BGE-Large-ZH-v1.5
+
+### 实验: 代码与文本相似度
+- 'def add(a, b):\n    return a + b' vs '这是一个计算两个数之和的函数。': 0.5117
+- 'def add(a, b):\n    return a + b' vs '我是一个用来计算两个数之和的函数': 0.5003
+- '这是一个计算两个数之和的函数。' vs '我是一个用来计算两个数之和的函数': 0.8769
+- 'def add(a, b):\n    return a + b' vs '\n# Function to add two numbers\ndef sum_numbers(x, y):\n    # Returns the sum of x and y\n    result = x + y\n    return result\n': 0.7348
+- 'def add(a, b):\n    return a + b' vs '\ndef sum_two_values(val1, val2):\n    s = val1 + val2\n    return s\n': 0.6901
+- '\n# Function to add two numbers\ndef sum_numbers(x, y):\n    # Returns the sum of x and y\n    result = x + y\n    return result\n' vs '\ndef sum_two_values(val1, val2):\n    s = val1 + val2\n    return s\n': 0.7984
+- '\n# Function to add two numbers\ndef sum_numbers(x, y):\n    # Returns the sum of x and y\n    result = x + y\n    return result\n' vs '\n# This function takes two arguments and returns their sum.\ndef calculate_sum(num1, num2):\n    # Perform addition\n    total = num1 + num2\n    # Return the result\n    return total\n': 0.7896
+- '这是一个计算两个数之和的函数。' vs '\n# Function to add two numbers\ndef sum_numbers(x, y):\n    # Returns the sum of x and y\n    result = x + y\n    return result\n': 0.5962
+
+### 实验: 文本与表格相似度
+- '这是一个关于不同水果信息的表格。' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.5954
+- '这个表格展示了苹果、香蕉和柠檬的颜色和味道。' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.6987
+- '水果信息：苹果是红色的，味道甜；香蕉是黄色的，味道甜；柠檬是黄色的，味道酸。' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.8820
+- '这是一段关于天气的文字，与水果表格无关。' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.3409
+- '这是一个关于不同水果信息的表格。' vs '这个表格展示了苹果、香蕉和柠檬的颜色和味道。': 0.7404
+- '这是一个关于不同水果信息的表格。' vs '水果信息：苹果是红色的，味道甜；香蕉是黄色的，味道甜；柠檬是黄色的，味道酸。': 0.5977
+- '这个表格展示了苹果、香蕉和柠檬的颜色和味道。' vs '水果信息：苹果是红色的，味道甜；香蕉是黄色的，味道甜；柠檬是黄色的，味道酸。': 0.7136
+- '这是一个关于不同水果信息的表格。' vs '这是一段关于天气的文字，与水果表格无关。': 0.5255
+- '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |' vs '| Fruit  | Color  | Taste  |\n|--------|--------|--------|\n| Apple  | Red    | Sweet  |\n| Banana | Yellow | Sweet  |\n| Orange | Orange | Sweet  |': 0.8371
+- '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |' vs '| 城市   | 人口(万) | GDP(亿) |\n|------|-------|-------|\n| 北京   | 2189  | 40269 |\n| 上海   | 2487  | 43214 |\n| 广州   | 1867  | 28231 |': 0.3508
+
+### 实验: 查询(代码)与目标相似度
+- 'Python 函数：计算 a 和 b 的和' vs 'def add(a, b):\n    return a + b': 0.6629
+- '用于两数相加的函数，基于python' vs 'def add(a, b):\n    return a + b': 0.6227
+- 'python add function' vs 'def add(a, b):\n    return a + b': 0.6772
+- '计算' vs 'def add(a, b):\n    return a + b': 0.4335
+- 'Java add method' vs 'def add(a, b):\n    return a + b': 0.6490
+- '柠檬是什么味道的？' vs 'def add(a, b):\n    return a + b': 0.0723
+- '最近的电影推荐' vs 'def add(a, b):\n    return a + b': 0.1771
+- 'Python 函数：计算 a 和 b 的和' vs '用于两数相加的函数，基于python': 0.7117
+
+### 实验: 查询(表格)与目标相似度
+- '柠檬是什么味道的？' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.5173
+- '水果颜色和味道概览' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.6708
+- '表格里有哪些水果？' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.5338
+- '水果' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.5663
+- '食物营养成分' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.4220
+- 'Python 函数：计算 a 和 b 的和' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.2979
+- '最近的电影推荐' vs '| 水果   | 颜色 | 味道 |\n|------|----|----|\n| 苹果   | 红色 | 甜   |\n| 香蕉   | 黄色 | 甜   |\n| 柠檬   | 黄色 | 酸   |': 0.1715
+- '柠檬是什么味道的？' vs '水果颜色和味道概览': 0.4375
+
+============================== 结果汇总结束 ==============================

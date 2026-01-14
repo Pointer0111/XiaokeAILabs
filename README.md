@@ -36,7 +36,7 @@
 2. **~~文档分块~~**：结合语义和结构的混合分块策略，地址： [datas/test_hybrid_chunking](datas/test_hybrid_chunking)
 3. **~~延迟分块~~**：先编码后分块的策略，保持上下文连贯性，地址： [datas/test_late_chunking](datas/test_late_chunking)
 4. **~~句子长度影响分析~~**：句子长度对相似度计算的影响研究，地址： [datas/test_sentence_length](datas/test_sentence_length)
-5. **代码表格相似度**：特殊格式文本的相似度计算方法，地址： [datas/test_sentence_similarity_with_code_or_table](datas/test_sentence_similarity_with_code_or_table)
+5. **~~代码表格相似度~~**：特殊格式文本的相似度计算方法，地址： [datas/test_sentence_similarity_with_code_or_table](datas/test_sentence_similarity_with_code_or_table)
 
 ### 🎯 检索增强与重排序
 

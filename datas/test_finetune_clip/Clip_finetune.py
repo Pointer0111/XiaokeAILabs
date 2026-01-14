@@ -288,7 +288,7 @@ def get_default_training_args(
         TrainingArguments: arguments object for HF Trainer
     """
     return TrainingArguments(
-        experiment_name,
+        output_dir=f"./clip_checkpoints/{experiment_name}",
         per_device_train_batch_size=batch_size,
         learning_rate=lr,
         num_train_epochs=num_epoch,
@@ -297,12 +297,15 @@ def get_default_training_args(
         logging_steps=10,
         save_total_limit=2,
         eval_strategy="epoch",
-        save_strategy="epoch",
+        save_strategy="no",
         fp16=True,
         remove_unused_columns=False,
-        load_best_model_at_end=True,
+        load_best_model_at_end=False,
         dataloader_num_workers=num_workers,
     )
+
+
+
 # All layers tuning
 
 clip_full_finetuned = CLIPModel.from_pretrained(MODEL_NAME)
@@ -320,79 +323,79 @@ print_trainable_parameters(clip_full_finetuned)
 evaluate_clip_classifier(clip_full_finetuned, dataset['test'], TOKENIZER, labels)
 
 # Fine-tuning Text Encoder
-# clip_text_model_tuning = CLIPModel.from_pretrained(MODEL_NAME)
-# freeze_params(clip_text_model_tuning.vision_model)
+clip_text_model_tuning = CLIPModel.from_pretrained(MODEL_NAME)
+freeze_params(clip_text_model_tuning.vision_model)
 
-# trainer = Trainer(
-#     model=clip_text_model_tuning,
-#     args=get_default_training_args("clip-text-model-tuning-oxford-pets", 3e-5),
-#     data_collator=collate_train_fn,
-#     train_dataset=dataset["train"],
-#     eval_dataset=dataset["val"],
-# )
+trainer = Trainer(
+    model=clip_text_model_tuning,
+    args=get_default_training_args("clip-text-model-tuning-oxford-pets", 3e-5),
+    data_collator=collate_train_fn,
+    train_dataset=dataset["train"],
+    eval_dataset=dataset["val"],
+)
 
-# trainer.train()
+trainer.train()
 
-# print_trainable_parameters(clip_text_model_tuning)
-# evaluate_clip_classifier(clip_text_model_tuning, dataset['test'], TOKENIZER, labels)
+print_trainable_parameters(clip_text_model_tuning)
+evaluate_clip_classifier(clip_text_model_tuning, dataset['test'], TOKENIZER, labels)
 
 
 # Fine-tuning Image Encoder
-# clip_vision_model_tuning = CLIPModel.from_pretrained(MODEL_NAME)
-# freeze_params(clip_vision_model_tuning.text_model)
+clip_vision_model_tuning = CLIPModel.from_pretrained(MODEL_NAME)
+freeze_params(clip_vision_model_tuning.text_model)
 
-# trainer = Trainer(
-#     model=clip_vision_model_tuning,
-#     args=get_default_training_args("clip-vision-model-tuning-oxford-pets", 3e-5),
-#     data_collator=collate_train_fn,
-#     train_dataset=dataset["train"],
-#     eval_dataset=dataset["test"],
-# )
+trainer = Trainer(
+    model=clip_vision_model_tuning,
+    args=get_default_training_args("clip-vision-model-tuning-oxford-pets", 3e-5),
+    data_collator=collate_train_fn,
+    train_dataset=dataset["train"],
+    eval_dataset=dataset["test"],
+)
 
-# trainer.train()
+trainer.train()
 
-# print_trainable_parameters(clip_vision_model_tuning)
-# evaluate_clip_classifier(clip_vision_model_tuning, dataset['test'], TOKENIZER, labels)
+print_trainable_parameters(clip_vision_model_tuning)
+evaluate_clip_classifier(clip_vision_model_tuning, dataset['test'], TOKENIZER, labels)
 
 
 # # Fine-tune 30 percent of the Last Layers of Vision-Language Model
-# clip_partial_tuning = CLIPModel.from_pretrained(MODEL_NAME)
-# freeze_params(clip_partial_tuning.text_model, freeze_top_percent=0.7)
-# freeze_params(clip_partial_tuning.vision_model, freeze_top_percent=0.7)
+clip_partial_tuning = CLIPModel.from_pretrained(MODEL_NAME)
+freeze_params(clip_partial_tuning.text_model, freeze_top_percent=0.7)
+freeze_params(clip_partial_tuning.vision_model, freeze_top_percent=0.7)
 
-# trainer = Trainer(
-#     model=clip_partial_tuning,
-#     args=get_default_training_args("clip-partial-model-tuning-oxford-pets", 3e-5),
-#     data_collator=collate_train_fn,
-#     train_dataset=dataset["train"],
-#     eval_dataset=dataset["val"],
-# )
+trainer = Trainer(
+    model=clip_partial_tuning,
+    args=get_default_training_args("clip-partial-model-tuning-oxford-pets", 3e-5),
+    data_collator=collate_train_fn,
+    train_dataset=dataset["train"],
+    eval_dataset=dataset["val"],
+)
 
-# trainer.train()
+trainer.train()
 
-# print_trainable_parameters(clip_partial_tuning)
-# evaluate_clip_classifier(clip_partial_tuning, dataset['test'], TOKENIZER, labels)
+print_trainable_parameters(clip_partial_tuning)
+evaluate_clip_classifier(clip_partial_tuning, dataset['test'], TOKENIZER, labels)
 
 
 # PEFT tuning (with LoRA)
-# clip_lora_tuning = CLIPModel.from_pretrained(MODEL_NAME)
-# config = LoraConfig(
-#     r=64,
-#     lora_alpha=64,
-#     target_modules=['q_proj', 'k_proj', 'v_proj'],
-# )
+clip_lora_tuning = CLIPModel.from_pretrained(MODEL_NAME)
+config = LoraConfig(
+    r=64,
+    lora_alpha=64,
+    target_modules=['q_proj', 'k_proj', 'v_proj'],
+)
 
-# lora_model = get_peft_model(clip_lora_tuning, config)
+lora_model = get_peft_model(clip_lora_tuning, config)
 
-# trainer = Trainer(
-#     model=lora_model,
-#     args=get_default_training_args("clip-lora-model-tuning-oxford-pets", 3e-4),
-#     data_collator=collate_train_fn,
-#     train_dataset=dataset["train"],
-#     eval_dataset=dataset["val"],
-# )
+trainer = Trainer(
+    model=lora_model,
+    args=get_default_training_args("clip-lora-model-tuning-oxford-pets", 3e-4),
+    data_collator=collate_train_fn,
+    train_dataset=dataset["train"],
+    eval_dataset=dataset["val"],
+)
 
-# trainer.train()
+trainer.train()
 
-# print_trainable_parameters(lora_model)
-# evaluate_clip_classifier(lora_model, dataset['test'], TOKENIZER, labels)
+print_trainable_parameters(lora_model)
+evaluate_clip_classifier(lora_model, dataset['test'], TOKENIZER, labels)
